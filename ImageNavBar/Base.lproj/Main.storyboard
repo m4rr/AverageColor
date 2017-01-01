@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yandex-Images-2016-12-20" translatesAutoresizingMaskIntoConstraints="NO" id="EiH-Vb-fgk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Yandex-Images-2016-12-23" translatesAutoresizingMaskIntoConstraints="NO" id="EiH-Vb-fgk">
                                 <rect key="frame" x="0.0" y="20" width="375" height="233.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="EiH-Vb-fgk" secondAttribute="height" multiplier="45:28" id="Nw6-iL-PA9"/>
@@ -67,6 +67,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Yandex-Images-2016-12-20" width="450" height="280"/>
+        <image name="Yandex-Images-2016-12-23" width="450" height="280"/>
     </resources>
 </document>

@@ -22,20 +22,12 @@ class ViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
-    let fromColor = ColorAverager(on: imageView.image!, precision: 20)?.averageColor()
-    let gradientLayer = verticalGradientLayer(from: fromColor!, to: UIColor(white: 0.6, alpha: 0))
-    gradientView.layer.insertSublayer(gradientLayer, at: 0)
-    gradientLayer.frame = gradientView.bounds
+    let color = ColorAverager(on: imageView.image!, precision: 20)?.averageColor()
+    let gradientLayer = color?.verticalGradientLayer(to: color?.withAlphaComponent(0))
+    gradientLayer?.frame = gradientView.bounds
+    gradientView.layer.insertSublayer(gradientLayer!, at: 0)
 
-    view.backgroundColor = fromColor
-  }
-
-  func verticalGradientLayer(from: UIColor?, to: UIColor?) -> CAGradientLayer {
-    let gradient = CAGradientLayer()
-
-    gradient.colors = [from, to].flatMap({ $0?.cgColor })
-
-    return gradient
+    view.backgroundColor = color
   }
 
 }

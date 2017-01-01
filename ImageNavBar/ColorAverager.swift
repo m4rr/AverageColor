@@ -78,6 +78,16 @@ class ColorAverager {
 
 }
 
+extension UIColor {
+
+  func verticalGradientLayer(to: UIColor?) -> CAGradientLayer {
+    let gradient = CAGradientLayer()
+    gradient.colors = [self, to].flatMap({ $0?.cgColor })
+    return gradient
+  }
+
+}
+
 private func / (lhs: Int, rhs: Int) -> CGFloat {
   return CGFloat(lhs) / CGFloat(rhs)
 }
@@ -85,4 +95,3 @@ private func / (lhs: Int, rhs: Int) -> CGFloat {
 private func + (lhs: Int, rhs: UInt8) -> Int {
   return lhs + Int(rhs)
 }
-

@@ -70,10 +70,10 @@ class ColorAverager {
 
   private func exportColor(from: CGFloatColorComps) -> UIColor {
     return UIColor(
-      red:   CGFloat(from.r / 255.0),
-      green: CGFloat(from.g / 255.0),
-      blue:  CGFloat(from.b / 255.0),
-      alpha: CGFloat(from.a / 255.0))
+      red:   from.r / 255.0,
+      green: from.g / 255.0,
+      blue:  from.b / 255.0,
+      alpha: from.a / 255.0)
   }
 
 }

@@ -49,7 +49,7 @@ class ColorAverager {
   private func averageColor(pointer: UnsafePointer<UInt8>, line: Int, precision: Int, width: CGFloat) -> UIColor {
     let wideStride = stride(from: 0, to: Int(width), by: precision)
     var numberOfItems = 0
-    let colorComponents: [Int] =
+    let colorComponents: CGFloatComps =
       wideStride
         .map { x in
           defer {
@@ -57,19 +57,17 @@ class ColorAverager {
           }
           return pixelInfo(data: pointer, x: x, y: line, width: size.width)
         }
-        .reduce(Array(repeating: 0, count: 4), { (res: [Int], nxt: UInt8Comps) -> [Int] in
-          return [
-            res[0] + nxt.0,
-            res[1] + nxt.1,
-            res[2] + nxt.2,
-            res[3] + nxt.3,
-          ]
+        .reduce((0.0, 0.0, 0.0, 0.0), { (res: CGFloatComps, nxt: UInt8Comps) -> CGFloatComps in
+          return (res.r + nxt.r,
+                  res.g + nxt.g,
+                  res.b + nxt.b,
+                  res.a + nxt.a)
         })
 
-    return exportColor(from: (colorComponents[0] / numberOfItems,
-                              colorComponents[1] / numberOfItems,
-                              colorComponents[2] / numberOfItems,
-                              colorComponents[3] / numberOfItems)
+    return exportColor(from: (colorComponents.r / numberOfItems,
+                              colorComponents.g / numberOfItems,
+                              colorComponents.b / numberOfItems,
+                              colorComponents.a / numberOfItems)
     )
   }
 
@@ -101,10 +99,10 @@ extension UIColor {
 
 }
 
-private func / (lhs: Int, rhs: Int) -> CGFloat {
-  return CGFloat(lhs) / CGFloat(rhs)
+private func / (lhs: CGFloat, rhs: Int) -> CGFloat {
+  return lhs / CGFloat(rhs)
 }
 
-private func + (lhs: Int, rhs: UInt8) -> Int {
-  return lhs + Int(rhs)
+private func + (lhs: CGFloat, rhs: UInt8) -> CGFloat {
+  return lhs + CGFloat(rhs)
 }

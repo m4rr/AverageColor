@@ -14,7 +14,7 @@ class ColorAverager {
   private typealias CGFloatComps = (r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat)
   private typealias UInt8Comps = (r: UInt8, g: UInt8, b: UInt8, a: UInt8)
 
-  private let imageData: CFData, precision: Int, size: CGSize, dataPointer: UnsafePointer<UInt8>
+  private let originalImage: UIImage, imageData: CFData, precision: Int, size: CGSize, dataPointer: UnsafePointer<UInt8>
 
   /// Init with precision
   ///
@@ -28,6 +28,8 @@ class ColorAverager {
     guard let dataPointer = CFDataGetBytePtr(imageData) else {
       return nil
     }
+
+    self.originalImage = image! // checked for a value earlier
 
     self.imageData = imageData
     self.dataPointer = dataPointer
@@ -85,6 +87,16 @@ class ColorAverager {
                    green: from.g / 255.0,
                    blue:  from.b / 255.0,
                    alpha: from.a / 255.0)
+  }
+
+  func imageDownsizingColorPicker() -> UIImage {
+    let smallSquare = CGSize(width: 1, height: 1)
+
+    return withExtendedLifetime(UIGraphicsImageRenderer(size: smallSquare)) { renderer in
+       renderer.image { _ in
+        self.originalImage.draw(in: CGRect(origin: .zero, size: smallSquare))
+      }
+    }
   }
 
 }

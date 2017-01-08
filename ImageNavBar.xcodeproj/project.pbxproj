@@ -13,7 +13,19 @@
 		035BBC8F1E191C0600147F53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035BBC8D1E191C0600147F53 /* Main.storyboard */; };
 		035BBC911E191C0600147F53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 035BBC901E191C0600147F53 /* Assets.xcassets */; };
 		035BBC941E191C0600147F53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035BBC921E191C0600147F53 /* LaunchScreen.storyboard */; };
+		03704E041E2274A900357DD7 /* ImageNavBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03704E031E2274A900357DD7 /* ImageNavBarTests.swift */; };
+		03704E0C1E22756E00357DD7 /* ColorAverager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031BB43D1E1954A90035F164 /* ColorAverager.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03704E061E2274A900357DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 035BBC7E1E191C0500147F53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 035BBC851E191C0500147F53;
+			remoteInfo = ImageNavBar;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		031BB43D1E1954A90035F164 /* ColorAverager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorAverager.swift; sourceTree = "<group>"; };
@@ -24,10 +36,20 @@
 		035BBC901E191C0600147F53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		035BBC931E191C0600147F53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		035BBC951E191C0600147F53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03704E011E2274A900357DD7 /* ImageNavBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageNavBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03704E031E2274A900357DD7 /* ImageNavBarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageNavBarTests.swift; sourceTree = "<group>"; };
+		03704E051E2274A900357DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		035BBC831E191C0500147F53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03704DFE1E2274A900357DD7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				035BBC881E191C0600147F53 /* ImageNavBar */,
+				03704E021E2274A900357DD7 /* ImageNavBarTests */,
 				035BBC871E191C0600147F53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				035BBC861E191C0600147F53 /* ImageNavBar.app */,
+				03704E011E2274A900357DD7 /* ImageNavBarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +89,15 @@
 				035BBC951E191C0600147F53 /* Info.plist */,
 			);
 			path = ImageNavBar;
+			sourceTree = "<group>";
+		};
+		03704E021E2274A900357DD7 /* ImageNavBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				03704E031E2274A900357DD7 /* ImageNavBarTests.swift */,
+				03704E051E2274A900357DD7 /* Info.plist */,
+			);
+			path = ImageNavBarTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +120,24 @@
 			productReference = 035BBC861E191C0600147F53 /* ImageNavBar.app */;
 			productType = "com.apple.product-type.application";
 		};
+		03704E001E2274A900357DD7 /* ImageNavBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03704E0A1E2274A900357DD7 /* Build configuration list for PBXNativeTarget "ImageNavBarTests" */;
+			buildPhases = (
+				03704DFD1E2274A900357DD7 /* Sources */,
+				03704DFE1E2274A900357DD7 /* Frameworks */,
+				03704DFF1E2274A900357DD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03704E071E2274A900357DD7 /* PBXTargetDependency */,
+			);
+			name = ImageNavBarTests;
+			productName = ImageNavBarTests;
+			productReference = 03704E011E2274A900357DD7 /* ImageNavBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -100,6 +151,12 @@
 					035BBC851E191C0500147F53 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+					};
+					03704E001E2274A900357DD7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Y5P7AX9UM2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 035BBC851E191C0500147F53;
 					};
 				};
 			};
@@ -117,6 +174,7 @@
 			projectRoot = "";
 			targets = (
 				035BBC851E191C0500147F53 /* ImageNavBar */,
+				03704E001E2274A900357DD7 /* ImageNavBarTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +187,13 @@
 				035BBC941E191C0600147F53 /* LaunchScreen.storyboard in Resources */,
 				035BBC911E191C0600147F53 /* Assets.xcassets in Resources */,
 				035BBC8F1E191C0600147F53 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03704DFF1E2274A900357DD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +210,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03704DFD1E2274A900357DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03704E0C1E22756E00357DD7 /* ColorAverager.swift in Sources */,
+				03704E041E2274A900357DD7 /* ImageNavBarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03704E071E2274A900357DD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 035BBC851E191C0500147F53 /* ImageNavBar */;
+			targetProxy = 03704E061E2274A900357DD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		035BBC8D1E191C0600147F53 /* Main.storyboard */ = {
@@ -284,6 +366,34 @@
 			};
 			name = Release;
 		};
+		03704E081E2274A900357DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y5P7AX9UM2;
+				INFOPLIST_FILE = ImageNavBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.m4rr.ImageNavBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageNavBar.app/ImageNavBar";
+			};
+			name = Debug;
+		};
+		03704E091E2274A900357DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y5P7AX9UM2;
+				INFOPLIST_FILE = ImageNavBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.m4rr.ImageNavBarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageNavBar.app/ImageNavBar";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +414,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		03704E0A1E2274A900357DD7 /* Build configuration list for PBXNativeTarget "ImageNavBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03704E081E2274A900357DD7 /* Debug */,
+				03704E091E2274A900357DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
